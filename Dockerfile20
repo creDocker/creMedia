@@ -10,6 +10,7 @@ ARG BUILD_MONTH=0
 ARG BUILD_TAG=latest
 
 ENV XXX_VERSION 1.0.0
+ENV TESSERACT_VERSION 5
 
 LABEL Name="Images for CRE" \
       CRE=$CRE_VERSION \ 
@@ -40,12 +41,13 @@ LABEL Name="Images for CRE" \
 
 # https://notesalexp.org/tesseract-ocr/#tesseract_5.x 
 RUN echo "deb https://notesalexp.org/tesseract-ocr5/$(lsb_release -cs)/ $(lsb_release -cs) main" \
-| sudo tee /etc/apt/sources.list.d/notesalexp.list > /dev/null && \
-    wget -O - https://notesalexp.org/debian/alexp_key.asc | sudo apt-key add && \
-    apt-get update && apt-get install tesseract-ocr
+| tee /etc/apt/sources.list.d/notesalexp.list > /dev/null && \
+    wget -O - https://notesalexp.org/debian/alexp_key.asc | apt-key add && \
+    apt-get update && apt-cache search tesseract && apt-get install -y --no-install-recommends tesseract-ocr
+#pytesseract ocrmypdf 
 
 
-RUN pip3 install python-imaging pytesseract
+RUN pip3 install python-imaging python3-pyocr 
 
 
 
