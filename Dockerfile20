@@ -40,12 +40,10 @@ LABEL Name="Images for CRE" \
 ##    apt-get -y --no-install-recommends install tesseract
 
 # https://notesalexp.org/tesseract-ocr/#tesseract_5.x 
-RUN apt-get install apt-transport-https
+RUN wget --help
 RUN echo "deb https://notesalexp.org/tesseract-ocr5/$(lsb_release -cs)/ $(lsb_release -cs) main" \
 | tee /etc/apt/sources.list.d/notesalexp.list > /dev/null
-RUN wget -O alexp_key.asc https://notesalexp.org/debian/alexp_key.asc 
-RUN echo alexp_key.asc | apt-key add 
-RUN rm -f alexp_key.asc
+RUN wget -O-https://notesalexp.org/debian/alexp_key.asc | apt-key add 
 RUN apt-get update 
 RUN apt-cache search tesseract 
 RUN apt-get install -y --no-install-recommends tesseract-ocr
