@@ -1,6 +1,11 @@
-mq: /cre/mq/init-queue.sh
+mqsh: /cre/mq/init-queue.sh
+mqpy: /cre/gen-template.sh /cre/mq/pika-config.py.tmpl
 languages: /cre/gen-template.sh /cre/tesseract.sh.tmpl /cre/tesseract.sh
-watch: /cre/init-consume.sh
-trigger: watch -n 120 /cre/do-publish.sh
+python: /cre/init-python.sh
+#watch: /cre/init-consume.sh
+#trigger: watch -n 120 /cre/do-publish.sh
 update: watch -n 600007 /cre/ubuntu-weekly.sh
 start: bash
+
+
+
