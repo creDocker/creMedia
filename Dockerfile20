@@ -43,7 +43,7 @@ LABEL Name="Images for CRE" \
 RUN wget --help
 RUN echo "deb https://notesalexp.org/tesseract-ocr5/$(lsb_release -cs)/ $(lsb_release -cs) main" \
 | tee /etc/apt/sources.list.d/notesalexp.list > /dev/null
-RUN wget -O-https://notesalexp.org/debian/alexp_key.asc | apt-key add 
+RUN wget -O- https://notesalexp.org/debian/alexp_key.asc | apt-key add 
 RUN apt-get update 
 RUN apt-cache search tesseract 
 RUN apt-get install -y --no-install-recommends tesseract-ocr
