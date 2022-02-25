@@ -22,9 +22,7 @@ LABEL Name="Images for CRE" \
 # uses jq & amqp-tools
 
 # install tesseract
-# https://github.com/tesseract-ocr/tessdoc
-# https://notesalexp.org/tesseract-ocr/#tesseract_5.x 
-# 
+
 ##RUN  
 ##  add-apt-repository ppa:alex-p/tesseract-ocr && \
 ##  apt-get update && \
@@ -36,10 +34,21 @@ LABEL Name="Images for CRE" \
 #apt-get install tesseract-ocr-all
 
 # https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr-devel
-RUN add-apt-repository ppa:alex-p/tesseract-ocr-devel && \
-    apt-get update && \
-    apt-get -y --no-install-recommends install tesseract
+## RUN add-apt-repository ppa:alex-p/tesseract-ocr-devel && \
+##    apt-get update && \
+##    apt-get -y --no-install-recommends install tesseract
+
+# https://notesalexp.org/tesseract-ocr/#tesseract_5.x 
+RUN echo "deb https://notesalexp.org/tesseract-ocr5/$(lsb_release -cs)/ $(lsb_release -cs) main" \
+| sudo tee /etc/apt/sources.list.d/notesalexp.list > /dev/null && \
+    wget -O - https://notesalexp.org/debian/alexp_key.asc | sudo apt-key add && \
+    apt-get update && apt-get install tesseract-ocr
+
+
 RUN pip3 install python-imaging pytesseract
+
+
+
 
 ## Move latex to different image
 # install Latex
