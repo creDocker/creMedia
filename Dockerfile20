@@ -71,6 +71,10 @@ RUN pip3 install opencv-python
 # https://wiki.ubuntuusers.de/ImageMagick/
 RUN apt-get -y --no-install-recommends install imagemagick
 
+# poppler pdf tools
+# https://wiki.ubuntuusers.de/poppler-utils/
+RUN apt-get -y --no-install-recommends install poppler-utils
+
 
 #zoomify
 #http://libvips.blogspot.com/2013/03/making-deepzoom-zoomify-and-google-maps.html
