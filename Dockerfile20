@@ -52,9 +52,6 @@ RUN apt-get install -y --no-install-recommends tesseract-ocr
 
 RUN pip3 install pyocr 
 
-
-
-
 ## Move latex to different image
 # install Latex
 # RUN apt-get -y --no-install-recommends install texlive-full latex-make latex2html 
@@ -75,12 +72,14 @@ RUN apt-get -y --no-install-recommends install imagemagick
 # https://wiki.ubuntuusers.de/poppler-utils/
 RUN apt-get -y --no-install-recommends install poppler-utils
 
-
-#zoomify
-#http://libvips.blogspot.com/2013/03/making-deepzoom-zoomify-and-google-maps.html
-#https://libvips.github.io/libvips/API/current/Making-image-pyramids.md.html
-#https://openseadragon.github.io/examples/creating-zooming-images/
-#https://libvips.github.io/libvips/API/current/using-cli.html
+# Install MagickSlicer (DeepZoom,Zoomify)
+# https://github.com/VoidVolker/MagickSlicer
+# Viewer: https://github.com/openseadragon/openseadragon
+RUN wget https://raw.githubusercontent.com/VoidVolker/MagickSlicer/master/magick-slicer.sh -O /cre/magick-slicer.sh
+RUN chmod 755 /cre/magick-slicer.sh
+# http://libvips.blogspot.com/2013/03/making-deepzoom-zoomify-and-google-maps.html
+# https://libvips.github.io/libvips/API/current/Making-image-pyramids.md.html
+# https://libvips.github.io/libvips/API/current/using-cli.html
 RUN apt-get -y --no-install-recommends install libvips-tools libvips-dev  
 
 
