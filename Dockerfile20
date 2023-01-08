@@ -1,5 +1,5 @@
 #
-# Images Dockerfile
+# Media Dockerfile
 #
 
 FROM tamboraorg/creubuntu:2020.0
@@ -12,7 +12,7 @@ ARG BUILD_TAG=latest
 ENV XXX_VERSION 1.0.0
 ENV TESSERACT_VERSION 5
 
-LABEL Name="Images for CRE" \
+LABEL Name="Media for CRE" \
       CRE=$CRE_VERSION \ 
       Year=$BUILD_YEAR \
       Month=$BUILD_MONTH \
@@ -91,7 +91,7 @@ RUN apt-get -y --no-install-recommends install libvips-tools libvips-dev
 
 
 RUN mkdir -p /cre && touch /cre/versions.txt && \
-   echo "$(date +'%F %R') \t creImage \t $XXX_VERSION" >> /cre/versions.txt && \
+   echo "$(date +'%F %R') \t creMedia \t $XXX_VERSION" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t \t $(tesseract --version | grep tesseract)" >> /cre/versions.txt 
 ##   echo "$(date +'%F %R') \t \t $(convert -version | grep Version)" >> /cre/versions.txt && \ 
 ##   echo "$(date +'%F %R') \t \t $(vips -version)" >> /cre/versions.txt && \ 
@@ -102,5 +102,5 @@ RUN mkdir -p /cre && touch /cre/versions.txt && \
 COPY cre /cre
 #WORKDIR /cre/
 
-ENTRYPOINT ["/cre/image-entrypoint.sh"]
-CMD ["shoreman", "/cre/image-procfile"]
+ENTRYPOINT ["/cre/media-entrypoint.sh"]
+CMD ["shoreman", "/cre/media-procfile"]
