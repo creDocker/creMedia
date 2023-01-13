@@ -1,0 +1,110 @@
+#
+# Media Dockerfile
+#
+
+FROM tamboraorg/creubuntu:2018.0
+MAINTAINER Michael Kahle <michael.kahle@yahoo.de>
+
+ARG BUILD_YEAR=2018
+ARG BUILD_MONTH=0
+ARG BUILD_TAG=latest
+
+ENV XXX_VERSION 1.0.0
+ENV TESSERACT_VERSION 5
+
+LABEL Name="Media for CRE" \
+      CRE=$CRE_VERSION \ 
+      Year=$BUILD_YEAR \
+      Month=$BUILD_MONTH \
+      Version=$XXX_VERSION \
+      OS="Ubuntu:$UBUNTU_VERSION" \
+      Build_=$BUILD_TAG 
+
+# uses jq & amqp-tools
+
+# install tesseract
+
+##RUN  
+##  add-apt-repository ppa:alex-p/tesseract-ocr && \
+##  apt-get update && \
+## apt-get -y upgrade && \
+##  apt-get -y --no-install-recommends install tesseract-ocr tesseract-ocr-eng
+#  apt-get -y --no-install-recommends install tesseract-ocr-all  && \
+#  apt-get -y --no-install-recommends install tesseract-ocr-deu tesseract-ocr-deu-frak
+#   tesseract-ocr-script-frak
+#apt-get install tesseract-ocr-all
+
+# https://launchpad.net/~alex-p/+archive/ubuntu/tesseract-ocr-devel
+## RUN add-apt-repository ppa:alex-p/tesseract-ocr-devel && \
+##    apt-get update && \
+##    apt-get -y --no-install-recommends install tesseract
+
+# https://notesalexp.org/tesseract-ocr/#tesseract_5.x 
+RUN wget --help
+RUN echo "deb https://notesalexp.org/tesseract-ocr5/$(lsb_release -cs)/ $(lsb_release -cs) main" \
+| tee /etc/apt/sources.list.d/notesalexp.list > /dev/null
+RUN wget -O- https://notesalexp.org/debian/alexp_key.asc | apt-key add 
+RUN apt-get update 
+RUN apt-cache search tesseract 
+RUN apt-get install -y --no-install-recommends tesseract-ocr
+#pytesseract ocrmypdf 
+
+
+RUN pip3 install pyocr 
+
+## Move latex to different image
+# install Latex
+# RUN apt-get -y --no-install-recommends install texlive-full latex-make latex2html 
+# python3-latexcodec 
+ 
+# opencv?
+# OpenCV
+RUN apt-get -y --no-install-recommends  install python3-opencv
+RUN pip3 install opencv-python
+
+
+# install image magick
+# https://imagemagick.org/script/magick.php
+# https://wiki.ubuntuusers.de/ImageMagick/
+RUN apt-get -y --no-install-recommends install imagemagick
+
+# poppler pdf tools
+# https://wiki.ubuntuusers.de/poppler-utils/
+RUN apt-get -y --no-install-recommends install poppler-utils
+
+# Install MagickSlicer (DeepZoom,Zoomify)
+# https://github.com/VoidVolker/MagickSlicer
+# Viewer: https://github.com/openseadragon/openseadragon
+RUN wget https://raw.githubusercontent.com/VoidVolker/MagickSlicer/master/magick-slicer.sh -O /cre/magick-slicer.sh
+RUN chmod 755 /cre/magick-slicer.sh
+# http://libvips.blogspot.com/2013/03/making-deepzoom-zoomify-and-google-maps.html
+# https://libvips.github.io/libvips/API/current/Making-image-pyramids.md.html
+# https://libvips.github.io/libvips/API/current/using-cli.html
+RUN apt-get -y --no-install-recommends install libvips-tools libvips-dev  
+
+
+#tesseract /home/kmicha/Pictures/frz.1863-06-03.02.jpg ./tess.hocr -l deu_frak -psm 1 hocr
+#tesseract /home/kmicha/Pictures/frz.1863-06-03.02.jpg ./tess.txt -l deu_frak -psm 1
+#tesseract  --version
+#tesseract --list-langs
+#tesseract-ocr tesseract-ocr-deu tesseract-ocr-deu-frak
+
+
+# install Latex
+RUN apt-get -y --no-install-recommends install texlive-full latex-make latex2html python3-latexcodec texlive-fonts-recommended
+
+
+RUN mkdir -p /cre && touch /cre/versions.txt && \
+   echo "$(date +'%F %R') \t creMedia \t $XXX_VERSION" >> /cre/versions.txt && \
+   echo "$(date +'%F %R') \t \t $(tesseract --version | grep tesseract)" >> /cre/versions.txt && \ 
+##   echo "$(date +'%F %R') \t \t $(convert -version | grep Version)" >> /cre/versions.txt && \ 
+##   echo "$(date +'%F %R') \t \t $(vips -version)" >> /cre/versions.txt && \ 
+##   echo "$(date +'%F %R') \t   openCV \t $(python3 -c 'import cv2; print(cv2.__version__)')" >> /cre/versions.txt && \
+   echo "$(date +'%F %R') \t \t $(latex --version | grep Debian)" >> /cre/versions.txt 
+
+
+COPY cre /cre
+#WORKDIR /cre/
+
+ENTRYPOINT ["/cre/media-entrypoint.sh"]
+CMD ["shoreman", "/cre/media-procfile"]

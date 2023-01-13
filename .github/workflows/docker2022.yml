@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: dockerhub:2020.0
+name: dockerhub:2022.0
 
 on:
   push:
@@ -8,8 +8,8 @@ on:
       - 'main'
   workflow_dispatch:
   schedule:
-    # * is a special character in YAML so you have to quote this string 1:00  weekly,Friday,1:00 #m h d/m m d/w 
-    - cron:  '30 2 * * 5'
+    # * is a special character in YAML so you have to quote this string 1:00  weekly,Saturday,1:00 #m h d/m m d/w 
+    - cron:  '30 2 * * 6'
 
 jobs:
   docker:
@@ -32,22 +32,22 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v3
         with:
-          file: ./Dockerfile20
+          file: ./Dockerfile22
           push: true
-          tags: tamboraorg/cremedia:check20 
+          tags: tamboraorg/cremedia:check22 
 
       -
         name: Test
         run: |
-          docker run tamboraorg/cremedia:check20 /cre/media-test.sh   
+          docker run tamboraorg/cremedia:check22 /cre/media-test.sh   
 
       -
         name: Build and push
         id: docker_push
         uses: docker/build-push-action@v3
         with:
-          file: ./Dockerfile20
+          file: ./Dockerfile22
           push: true
-          tags: tamboraorg/cremedia:2020.0, tamboraorg/cremedia:latest 
+          tags: tamboraorg/cremedia:2022.0
       
 
