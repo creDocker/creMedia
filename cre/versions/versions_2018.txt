@@ -5,5 +5,5 @@ creBuild 	 2023.01
   Java 	 openjdk version "1.8.0_352"
   Python3 	 Python 3.6.9
  creMedia 	 1.0.0
- 	 tesseract 5.3.0
- 	 pdfTeX 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian)
+  tesseract 5.3.0
+  pdfTeX 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian)
