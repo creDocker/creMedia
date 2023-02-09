@@ -16,6 +16,7 @@ https://linux.die.net/man/1/amqp-get
 https://linux.die.net/man/1/amqp-declare-queue
 https://linux.die.net/man/1/amqp-delete-queue
 
+Ghostscript
 
 
 https://github.com/easytopic-project/node-ocr-server
@@ -63,6 +64,12 @@ https://stackoverflow.com/questions/10228592/splitting-a-pdf-with-ghostscript
 #convert pdf to image
 https://stackoverflow.com/questions/653380/converting-a-pdf-to-png
 
+#convert pdf to plain text (w/o OCR)
+pdftotext  (poppler)
+
+#convert pdf to plain text (w OCR: tesseract)
+https://thucnc.medium.com/convert-a-scanned-pdf-to-text-with-linux-command-line-using-ocrmypdf-1a2e8d50277f
+https://github.com/ocrmypdf/OCRmyPDF
 
 
 Spellcheck:
