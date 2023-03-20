@@ -60,6 +60,11 @@ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook \
 
 #split pdf single pages
 https://stackoverflow.com/questions/10228592/splitting-a-pdf-with-ghostscript
+# gs -sDEVICE=pdfwrite -dSAFER -o outname.%d.pdf input.pdf
+
+#combine
+https://askubuntu.com/questions/2799/how-to-merge-several-pdf-files
+#gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dAutoRotatePages=/None -sOutputFile=finished.pdf single.*.pdf
 
 #convert pdf to image
 https://stackoverflow.com/questions/653380/converting-a-pdf-to-png

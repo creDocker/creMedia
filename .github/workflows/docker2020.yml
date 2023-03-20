@@ -34,12 +34,12 @@ jobs:
         with:
           file: ./Dockerfile20
           push: true
-          tags: tamboraorg/cremedia:check20 
+          tags: credocker/cremedia:check20 
 
       -
         name: Test
         run: |
-          docker run tamboraorg/cremedia:check20 /cre/media-test.sh   
+          docker run credocker/cremedia:check20 /cre/media-test.sh   
 
       -
         name: Build and push
@@ -48,6 +48,6 @@ jobs:
         with:
           file: ./Dockerfile20
           push: true
-          tags: tamboraorg/cremedia:2020.0, tamboraorg/cremedia:latest 
+          tags: credocker/cremedia:2020.0, credocker/cremedia:latest 
       
 

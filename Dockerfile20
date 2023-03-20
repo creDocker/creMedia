@@ -2,7 +2,7 @@
 # Media Dockerfile
 #
 
-FROM tamboraorg/creubuntu:2020.0
+FROM credocker/creubuntu:2020.0
 MAINTAINER Michael Kahle <michael.kahle@yahoo.de>
 
 ARG BUILD_YEAR=2020
@@ -60,6 +60,7 @@ RUN pip3 install pyocr
 # opencv?
 # OpenCV
 RUN apt-get -y --no-install-recommends  install python3-opencv
+RUN apt-get install -y python3-pil
 RUN pip3 install opencv-python
 
 

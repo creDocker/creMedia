@@ -34,12 +34,12 @@ jobs:
         with:
           file: ./Dockerfile18
           push: true
-          tags: tamboraorg/cremedia:check18 
+          tags: credocker/cremedia:check18 
 
       -
         name: Test
         run: |
-          docker run tamboraorg/cremedia:check18 /cre/media-test.sh   
+          docker run credocker/cremedia:check18 /cre/media-test.sh   
 
       -
         name: Build and push
@@ -48,6 +48,6 @@ jobs:
         with:
           file: ./Dockerfile18
           push: true
-          tags: tamboraorg/cremedia:2018.0 
+          tags: credocker/cremedia:2018.0 
       
 
