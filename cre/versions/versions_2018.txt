@@ -6,4 +6,6 @@ creBuild 	 2023.04
   Python3 	 Python 3.6.9
  creMedia 	 1.0.0
   tesseract 5.3.0
+  @(#) International Ispell Version 3.1.20 (but really Aspell 0.60.7-20110707)
+  @(#) International Ispell Version 3.2.06 (but really Hunspell 1.6.2)
   pdfTeX 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian)
