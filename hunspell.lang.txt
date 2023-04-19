@@ -1,0 +1,100 @@
+Add language to ASPELL_LANGUAGES (without aspell-)
+i.e HUNSPELL_LANGUAGES: de-de,en-us
+https://wiki.ubuntuusers.de/Rechtschreibkorrektur/#Woerterb%C3%BCcher
+https://wiki.ubuntuusers.de/Hunspell/
+https://metacpan.org/pod/Text::Hunspell
+
+hunspell-af - Afrikaans dictionary for hunspell
+hunspell-an - Aragonese dictionary for hunspell
+hunspell-ar - Arabic dictionary for hunspell
+hunspell-be - Belarusian dictionary for hunspell and academic orthography
+hunspell-bg - Bulgarian dictionary for hunspell
+hunspell-bn - Bengali dictionary for hunspell
+hunspell-bo - Classical Tibetan language dictionary for hunspell
+hunspell-br - Breton language dictionary for hunspell
+hunspell-bs - Bosnian dictionary for hunspell
+hunspell-ca - Catalan dictionaries for hunspell
+hunspell-cs - Czech dictionary for hunspell
+hunspell-da - Danish dictionary for hunspell
+hunspell-de-at - Austrian (German) dictionary for hunspell
+hunspell-de-at-frami - German (Austria) dictionary for hunspell ("frami" version)
+hunspell-de-ch - Swiss (German) dictionary for hunspell
+hunspell-de-ch-frami - German (Switzerland) dictionary for hunspell ("frami" version)
+hunspell-de-de - German dictionary for hunspell
+hunspell-de-de-frami - German dictionary for hunspell ("frami" version)
+hunspell-dz - Dzongkha language dictionary for hunspell
+hunspell-el - Modern Greek dictionary for hunspell
+hunspell-en-au - English (Australia) dictionary for hunspell
+hunspell-en-ca - English (Canada) dictionary for hunspell
+hunspell-en-gb - English (GB) dictionary for hunspell
+hunspell-en-us - English_american dictionary for hunspell
+hunspell-en-za - English (South Africa) dictionary for hunspell
+hunspell-es - Spanish dictionary for hunspell
+hunspell-eu - Basque (Euskera) dictionary for hunspell
+hunspell-eu-es - transitional dummy package to hunspell-eu
+hunspell-fr - French dictionary for hunspell (dependency package)
+hunspell-fr-classical - French dictionary for hunspell (classical version)
+hunspell-gd - Scottish Gaelic dictionary for hunspell
+hunspell-gl - Galician dictionary for hunspell
+hunspell-gl-es - Galician dictionary for hunspell
+hunspell-gu - Gujarati dictionary for hunspell
+hunspell-gug - Guarani dictionary for hunspell
+hunspell-he - Hebrew dictionary for hunspell
+hunspell-hi - Hindi dictionary for hunspell
+hunspell-hr - Croatian dictionary for hunspell
+hunspell-hu - Hungarian dictionary for hunspell
+hunspell-is - Icelandic dictionary for hunspell
+hunspell-it - Italian dictionary for hunspell
+hunspell-kk - Kazakh dictionary for hunspell
+hunspell-kmr - Kurmanji dictionary for hunspell
+hunspell-ko - Korean dictionary for hunspell
+hunspell-lo - Laotian dictionary for hunspell
+hunspell-lt - Lithuanian dictionary for hunspell
+hunspell-ml - Malayalam dictionary for hunspell
+hunspell-ne - Nepalese dictionary for hunspell
+hunspell-nl - Dutch dictionary for Hunspell
+hunspell-no - Norwegian dictionary for hunspell
+hunspell-oc - Occitan dictionary for hunspell
+hunspell-pl - Polish dictionary for hunspell
+hunspell-pt-br - Brazilian Portuguese dictionary for hunspell
+hunspell-pt-pt - Portuguese dictionary for hunspell
+hunspell-ro - Romanian dictionary for hunspell
+hunspell-ru - Russian dictionary for hunspell
+hunspell-se - North Sámi Hunspell dictionary
+hunspell-si - Sinhala dictionary for hunspell
+hunspell-sk - Slovak dictionary for hunspell
+hunspell-sl - Slovene dictionary for hunspell
+hunspell-sr - Serbian dictionary for hunspell
+hunspell-sv - Swedish dictionary for hunspell
+hunspell-sw - Swahili dictionary for hunspell
+hunspell-te - Telugu dictionary for hunspell
+hunspell-th - Thai dictionary for hunspell
+hunspell-tools - tools for hunspell
+hunspell-uk - Ukrainian dictionary for hunspell
+hunspell-uz - Uzbek dictionary for Hunspell
+hunspell-vi - Vietnamese dictionary for hunspell
+libhunspell-1.6-0 - spell checker and morphological analyzer (shared library)
+libhunspell-dev - spell checker and morphological analyzer (development)
+myspell-eo - Esperanto dictionary for myspell
+myspell-et - Estonian dictionary for MySpell
+myspell-fo - Faroese dictionary for myspell
+myspell-lv - Latvian dictionary for Myspell
+goldendict - feature-rich dictionary lookup program
+hunspell-de-med - German medical dictionary for hunspell
+hunspell-en-med - English medical dictionary for hunspell
+hunspell-fr-comprehensive - French dictionary for hunspell (comprehensive version)
+hunspell-fr-modern - French dictionary for hunspell (modern version)
+hunspell-fr-revised - French dictionary for hunspell (revised version)
+libreoffice - office productivity suite (metapackage)
+libtext-hunspell-perl - Perl interface to the GNU Hunspell library
+myspell-de-at - transitional dummy package for hunspell-de-at
+myspell-de-ch - transitional dummy package for hunspell-de-ch
+myspell-de-de - transitional dummy package for hunspell-de-de
+myspell-de-de-1901 - Traditional German dictionary for myspell
+myspell-es - Spanish dictionary for myspell
+myspell-fr - French dictionary for myspell (Hydro-Quebec version)
+myspell-hr - Croatian dictionary for hunspell - dummy transitional package
+myspell-pl - Polish dictionary for myspell
+myspell-pt-br - Brazilian Portuguese dictionary for myspell
+myspell-ru - Russian dictionary for MySpell
+myspell-tl - Tagalog dictionary for myspell/hunspell

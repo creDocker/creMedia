@@ -1,0 +1,17 @@
+#!/bin/bash
+# Current Container Name : {{ $CurrentContainer.Name }}
+
+apt-get update && \
+apt-get -y upgrade && \
+{{ range $hunLang := split $CurrentContainer.Env.HUNSPELL_LANGUAGES "," }} 
+ apt-get -y --no-install-recommends install hunspell-{{ $hunLang }}  && \
+{{ end }}
+sleep 1
+
+#apt-get autoremove
+#apt-get clean
+
+apt-cache search hunspell-
+#hunspell -D
+
+

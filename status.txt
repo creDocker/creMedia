@@ -79,6 +79,7 @@ https://github.com/ocrmypdf/OCRmyPDF
 
 Spellcheck:
 https://wiki.ubuntuusers.de/Hunspell/
+https://metacpan.org/pod/Text::Hunspell
 https://wiki.ubuntuusers.de/Rechtschreibkorrektur/#Woerterb%C3%BCcher
 # apt-get install hunspell hunspell-tools 
 # apt-get install hunspell-de-de
@@ -90,6 +91,7 @@ https://wiki.ubuntuusers.de/gImageReader/ (UI)
 https://www.linux-community.de/ausgaben/linuxuser/2005/12/spellchecker-auf-der-konsole-ispell-und-aspell/3/
 http://aspell.net/
 https://wiki.ubuntuusers.de/GNU_Aspell/
+https://metacpan.org/pod/Text::Aspell
 https://wiki.ubuntuusers.de/Rechtschreibkorrektur/#Woerterb%C3%BCcher
 # apt-get install aspell 
 # apt-get install aspell-de-1901

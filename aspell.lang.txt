@@ -1,0 +1,84 @@
+Add language to ASPELL_LANGUAGES (without aspell-)
+i.e ASPELL_LANGUAGES: de,de-1901,en
+https://wiki.ubuntuusers.de/Rechtschreibkorrektur/#Woerterb%C3%BCcher
+https://wiki.ubuntuusers.de/GNU_Aspell/
+https://metacpan.org/pod/Text::Aspell
+
+aspell - GNU Aspell spell-checker
+aspell-doc - Documentation for GNU Aspell spell-checker
+aspell-en - English dictionary for GNU Aspell
+hunspell-ar - Arabic dictionary for hunspell
+libaspell-dev - Development files for applications with GNU Aspell support
+aspell-af - The Afrikaans dictionary for aspell
+aspell-am - Amharic dictionary for aspell
+aspell-ar - Arabic dictionary for aspell
+aspell-ar-large - Large Arabic dictionary for aspell
+aspell-bg - Bulgarian dictionary for aspell
+aspell-bn - Bengali (bn) dictionary for GNU aspell
+aspell-br - Breton dictionary for GNU Aspell
+aspell-ca - Catalan dictionary for aspell
+aspell-cs - Czech dictionary for GNU Aspell
+aspell-cy - Welsh dictionary for GNU Aspell
+aspell-da - The Comprehensive Danish Dictionary (DSDO) - aspell
+aspell-de - German dictionary for aspell
+aspell-de-1901 - Traditional German dictionary for aspell
+aspell-el - Greek dictionary for GNU Aspell
+aspell-eo - Esperanto dictionary for aspell
+aspell-eo-cx7 - Esperanto dictionary for aspell, "cx" 7bit encoding
+aspell-es - Spanish dictionary for aspell
+aspell-et - Estonian dictionary for Aspell
+aspell-eu - Basque (Euskera) dictionary for aspell
+aspell-eu-es - transitional dummy package to aspell-eu
+aspell-fa - Persian dictionary for GNU Aspell
+aspell-fo - Faroese dictionary for aspell
+aspell-fr - French dictionary for aspell
+aspell-ga - Irish (Gaeilge) dictionary for GNU Aspell
+aspell-gl-minimos - Aspell dictionary for Galician (minimos)
+aspell-gu - Gujarati (gu) dictionary for GNU aspell
+aspell-he - Hebrew dictionary for aspell
+aspell-hi - Hindi (hi) dictionary for GNU aspell
+aspell-hr - The Croatian dictionary for GNU Aspell
+aspell-hsb - Upper Sorbian dictionary for GNU Aspell
+aspell-hu - Hungarian dictionary for aspell
+aspell-hy - Armenian dictionary for GNU Aspell
+aspell-id - Indonesian (id) dictionary for GNU aspell
+aspell-is - Icelandic dictionary for GNU Aspell
+aspell-it - Italian dictionary for GNU Aspell
+aspell-kk - Kazakh dictionary for GNU Aspell
+aspell-kn - Kannada (kn) dictionary for GNU aspell
+aspell-ku - Kurdish dictionary for aspell
+aspell-lt - aspell dictionary for Lithuanian (LT)
+aspell-lv - Latvian dictionary for Aspell
+aspell-ml - Malayalam (ml) dictionary for GNU aspell
+aspell-mr - Marathi (mr) dictionary for GNU aspell
+aspell-nl - Dutch dictionary for Aspell
+aspell-no - Norwegian dictionary for aspell
+aspell-nr - The Ndebele dictionary for aspell
+aspell-ns - The Northern Sotho dictionary for aspell
+aspell-or - Oriya (or) dictionary for GNU aspell
+aspell-pa - Punjabi (pa) dictionary for GNU aspell
+aspell-pl - Polish dictionary for aspell
+aspell-pt - Portuguese dictionaries for GNU Aspell (old package)
+aspell-pt-br - Brazilian Portuguese dictionary for GNU Aspell
+aspell-pt-pt - European Portuguese dictionary for GNU Aspell
+aspell-ro - Romanian dictionary for GNU aspell
+aspell-ru - Russian dictionary for Aspell
+aspell-sk - Slovak dictionary for GNU Aspell
+aspell-sl - Slovenian dictionary for GNU Aspell
+aspell-ss - The Swazi dictionary for aspell
+aspell-st - The Southern Sotho dictionary for aspell
+aspell-sv - Swedish dictionary for GNU aspell
+aspell-ta - Tamil (ta) dictionary for GNU aspell
+aspell-te - Telugu (te) dictionary for GNU aspell
+aspell-tl - Tagalog dictionary for GNU Aspell
+aspell-tn - The Tswana dictionary for aspell
+aspell-ts - The Tsonga dictionary for aspell
+aspell-uk - Ukrainian dictionary for GNU Aspell
+aspell-uz - The Uzbek dictionary for GNU Aspell
+aspell-xh - The Xhosa dictionary for aspell
+aspell-zu - The Zulu dictionary for aspell
+libraspell-ruby - Transitional package for raspell
+libraspell-ruby1.8 - Transitional package for raspell
+libraspell-ruby1.9.1 - Transitional package for raspell
+libtext-aspell-perl - Perl interface to the GNU Aspell library
+raspell - interface binding for the Aspell spelling checker
