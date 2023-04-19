@@ -49,8 +49,15 @@ RUN apt-cache search tesseract
 RUN apt-get install -y --no-install-recommends tesseract-ocr
 #pytesseract ocrmypdf 
 
-
 RUN pip3 install pyocr 
+
+# Install Spellchecker
+# https://wiki.ubuntuusers.de/GNU_Aspell/
+RUN apt-get install -y --no-install-recommends aspell 
+# apt-get install aspell-de aspell-de-1901
+# https://wiki.ubuntuusers.de/Hunspell/
+RUN apt-get install -y --no-install-recommends hunspell hunspell-tools
+# apt-get install hunspell-de-de 
 
 ## Move latex to different image
 # install Latex
