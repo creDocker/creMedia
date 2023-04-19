@@ -79,7 +79,22 @@ https://github.com/ocrmypdf/OCRmyPDF
 
 Spellcheck:
 https://wiki.ubuntuusers.de/Hunspell/
+https://wiki.ubuntuusers.de/Rechtschreibkorrektur/#Woerterb%C3%BCcher
+# apt-get install hunspell hunspell-tools 
+# apt-get install hunspell-de-de
+# hunspell -i utf-8 -d de_DE -l frz.1943-02-24.01.txt > list_of_wrong_words.txt
+
 https://wiki.ubuntuusers.de/gImageReader/ (UI)
 
-
+ Aspell:
+https://www.linux-community.de/ausgaben/linuxuser/2005/12/spellchecker-auf-der-konsole-ispell-und-aspell/3/
+http://aspell.net/
+https://wiki.ubuntuusers.de/GNU_Aspell/
+https://wiki.ubuntuusers.de/Rechtschreibkorrektur/#Woerterb%C3%BCcher
+# apt-get install aspell 
+# apt-get install aspell-de-1901
+# apt-get install aspell-de
+# aspell -b -d de-1901 --sug-mode bad-spellers -c Falsch.txt 
+# apt-get install aspell-en 
+# cat frz.1943-02-24.01.txt | aspell list -d de-1901  > list_of_wrong_words.txt
 
