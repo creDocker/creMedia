@@ -1,4 +1,4 @@
-Add language to ASPELL_LANGUAGES (without aspell-)
+Add language to HUNSPELL_LANGUAGES (without aspell-)
 i.e HUNSPELL_LANGUAGES: de-de,en-us
 https://wiki.ubuntuusers.de/Rechtschreibkorrektur/#Woerterb%C3%BCcher
 https://wiki.ubuntuusers.de/Hunspell/
