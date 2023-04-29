@@ -1,8 +1,9 @@
 mqsh: /cre/mq/init-queue.sh
 mqpy: /cre/gen-template.sh /cre/mq/pika-config.py.tmpl
-languages: /cre/gen-template.sh /cre/tesseract.sh.tmpl /cre/tesseract.sh
-aspell: /cre/gen-template.sh /cre/aspell.sh.tmpl /cre/aspell.sh 
-hunspell: /cre/gen-template.sh /cre/hunspell.sh.tmpl /cre/hunspell.sh 
+#tesseract: /cre/gen-template.sh /cre/tesseract.sh.tmpl /cre/tesseract.sh
+#aspell: /cre/gen-template.sh /cre/aspell.sh.tmpl /cre/aspell.sh 
+#hunspell: /cre/gen-template.sh /cre/hunspell.sh.tmpl /cre/hunspell.sh 
+languages: /cre/gen-template.sh /cre/languages.sh.tmpl /cre/languages.sh
 python: /cre/init-python.sh
 #watch: /cre/init-consume.sh
 #trigger: watch -n 120 /cre/do-publish.sh

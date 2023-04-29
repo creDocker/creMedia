@@ -1,0 +1,46 @@
+#!/bin/bash
+# Current Container Name : {{ $CurrentContainer.Name }}
+
+
+## TESSERACT
+apt-get update && \
+apt-get -y upgrade && \
+{{ range $tessLang := split $CurrentContainer.Env.TESSERACT_LANGUAGES "," }} 
+ apt-get -y --no-install-recommends install tesseract-ocr-{{ $tessLang }}  && \
+{{ end }}
+sleep 1
+
+#apt-get autoremove
+#apt-get clean
+
+tesseract --list-langs
+
+
+## ASPELL
+apt-get update && \
+apt-get -y upgrade && \
+{{ range $aspellLang := split $CurrentContainer.Env.ASPELL_LANGUAGES "," }} 
+ apt-get -y --no-install-recommends install aspell-{{ $aspellLang }}  && \
+{{ end }}
+sleep 1
+
+#apt-get autoremove
+#apt-get clean
+
+aspell dicts
+
+## HUNSPELL
+apt-get update && \
+apt-get -y upgrade && \
+{{ range $hunLang := split $CurrentContainer.Env.HUNSPELL_LANGUAGES "," }} 
+ apt-get -y --no-install-recommends install hunspell-{{ $hunLang }}  && \
+{{ end }}
+sleep 1
+
+#apt-get autoremove
+#apt-get clean
+
+apt-cache search hunspell-
+#hunspell -D
+
+
