@@ -6,7 +6,7 @@ creBuild 	 2023.04
   Java 	 openjdk version "19.0.2" 2023-01-17
   Python3 	 Python 3.10.6
  creMedia 	 1.0.0
-  tesseract 5.3.0
+  tesseract 5.3.1
   @(#) International Ispell Version 3.1.20 (but really Aspell 0.60.8)
   @(#) International Ispell Version 3.2.06 (but really Hunspell 1.7.0)
   pdfTeX 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian)
