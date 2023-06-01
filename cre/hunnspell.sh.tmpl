@@ -1,0 +1,42 @@
+#!/bin/bash
+# Current Container Name : {{ $CurrentContainer.Name }}
+
+sleep 5
+# Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it
+# sudo docker exec crepython ls -l /var/lib/dpkg/
+
+apt-get update && \
+apt-get -y upgrade && \
+{{ range $hunLang := split $CurrentContainer.Env.HUNSPELL_LANGUAGES "," }} 
+ apt-get -y --no-install-recommends install hunspell-{{ $hunLang }}  && \
+{{ end }}
+sleep 1
+
+file -bi /usr/share/hunspell/*.aff  && \
+file -bi /usr/share/hunspell/*.dic
+
+for fn in /usr/share/hunspell/*.aff do 
+  echo "Processing $fn file..."
+  file -bi $fn
+done
+
+for fn in /usr/share/hunspell/*.dic do 
+  echo "Processing $fn file..."
+  file -bi $fn
+done
+
+#apt-get autoremove
+#apt-get clean
+
+## check if 
+## file -bi ../examples/frz.1844-09-07g.01.txt  -> utf-8 (not iso-8859-1) else:
+# sudo  cp /usr/share/hunspell/de_DE.aff /usr/share/hunspell/de_DE.aff.orig
+# sudo iconv --from ISO8859-1 /usr/share/hunspell/de_DE.aff.orig > ./de_DE.aff
+# sudo  cp /usr/share/hunspell/de_DE.dic /usr/share/hunspell/de_DE.dic.orig
+# sudo iconv --from ISO8859-1 /usr/share/hunspell/de_DE.dic.orig > ./de_DE.dic
+##### strange ####  sudo sed -i /usr/share/hunspell/de_DE.aff  's/SET ISO8859-1/SET UTF-8/'
+
+apt-cache search hunspell-
+#hunspell -D
+
+
