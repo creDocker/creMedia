@@ -12,18 +12,50 @@ apt-get -y upgrade && \
 {{ end }}
 sleep 1
 
+for fn in /usr/share/hunspell/*.aff; do 
+  #echo "Processing $fn file..."
+  fileEnc=$(file -bi $fn)
+  #echo $fileEnc
+  case "$fileEnc" in
+    *"iso-8859-1"*)
+      echo "ISO encoding found: $fn"
+      cp "$fn" "$fn.orig"
+      iconv --from ISO8859-1 "$fn.orig" > "$fn"
+      sed -i "$fn"  's/SET ISO8859-1/SET UTF-8/'
+      ;;
+   *"utf-8"*)
+      echo "UTF-8 encoding found: $fn"
+      ;;
+   *)
+      echo "UNKNOWN encoding found: $fileEnc in $fn"
+      head $fn
+      ;;
+  esac
+done
+
+for fn in /usr/share/hunspell/*.dic; do 
+  #echo "Processing $fn file..."
+  fileEnc=$(file -bi $fn)
+  #echo $fileEnc
+  case "$fileEnc" in
+    *"iso-8859-1"*)
+      echo "ISO encoding found: $fn"
+      cp "$fn" "$fn.orig"
+      iconv --from ISO8859-1 "$fn.orig" > "$fn"
+      #sed -i "$fn"  's/SET ISO8859-1/SET UTF-8/'
+      ;;
+   *"utf-8"*)
+      echo "UTF-8 encoding found: $fn"
+      ;;
+   *)
+      echo "UNKNOWN encoding found: $fileEnc in $fn"
+      head $fn
+      ;;
+  esac
+done
+
 file -bi /usr/share/hunspell/*.aff  && \
 file -bi /usr/share/hunspell/*.dic
-
-for fn in /usr/share/hunspell/*.aff do 
-  echo "Processing $fn file..."
-  file -bi $fn
-done
-
-for fn in /usr/share/hunspell/*.dic do 
-  echo "Processing $fn file..."
-  file -bi $fn
-done
 
 #apt-get autoremove
 #apt-get clean
