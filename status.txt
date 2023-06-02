@@ -100,3 +100,14 @@ https://wiki.ubuntuusers.de/Rechtschreibkorrektur/#Woerterb%C3%BCcher
 # apt-get install aspell-en 
 # cat frz.1943-02-24.01.txt | aspell list -d de-1901  > list_of_wrong_words.txt
 
+ffmpeg:
+https://askubuntu.com/questions/828303/how-to-add-an-image-at-the-end-of-a-video-from-the-terminal
+https://askubuntu.com/questions/610903/how-can-i-create-a-video-file-from-a-set-of-jpg-images
+# ffmpeg -loop 1 -i input.png -c:v libx264 -t 30 -pix_fmt yuv420p picture.mp4
+# ffmpeg -i "concat:input.mp4|picture.mp4" -c copy output.mp4
+# convert -delay 1 image-*.jpg output.mp4 (image magick)
+# ffmpeg -framerate 25 -i image-%05d.jpg -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p output.mp4
+# ffmpeg -formats
+# ffmpeg -codecs
+# ffmpeg -help
+

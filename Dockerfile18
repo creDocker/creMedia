@@ -76,6 +76,9 @@ RUN apt-get install -y python3-pil
 # https://wiki.ubuntuusers.de/ImageMagick/
 RUN apt-get -y --no-install-recommends install imagemagick
 
+# Install ffmpeg
+RUN apt-get -y --no-install-recommends install ffmpeg
+
 # poppler pdf tools
 # https://wiki.ubuntuusers.de/poppler-utils/
 RUN apt-get -y --no-install-recommends install poppler-utils
@@ -110,7 +113,9 @@ RUN mkdir -p /cre && touch /cre/versions.txt && \
 ##   echo "$(date +'%F %R') \t  $(convert -version | grep Version)" >> /cre/versions.txt && \ 
 ##   echo "$(date +'%F %R') \t  $(vips -version)" >> /cre/versions.txt && \ 
 ##   echo "$(date +'%F %R') \t  openCV \t $(python3 -c 'import cv2; print(cv2.__version__)')" >> /cre/versions.txt && \
-   echo "$(date +'%F %R') \t  $(latex --version | grep Debian)" >> /cre/versions.txt 
+   echo "$(date +'%F %R') \t  $(latex --version | grep Debian)" >> /cre/versions.txt && \ 
+   echo "$(date +'%F %R') \t  $(ffmpeg -version | sed -e 's/-0ubuntu.*//g' | sed -e 's/configuration:.*//g'  | grep version)" >> /cre/versions.txt
+
 
 
 COPY cre /cre
