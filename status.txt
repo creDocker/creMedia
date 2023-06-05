@@ -50,7 +50,7 @@ http://fz.ub.uni-freiburg.de/show/pics/18ff/1863/06/frz.1863-06-03.02.jpg
 
 https://stackoverflow.com/questions/44101759/imagemagick-insert-an-image-at-a-specific-position-size-into-a-larger-image
 
-
+### BEST: Add sh-script to a folder (i.e. see GCPE)
 //compress pdf
 https://opensource.com/article/20/8/reduce-pdf
 
@@ -84,6 +84,7 @@ https://wiki.ubuntuusers.de/Rechtschreibkorrektur/#Woerterb%C3%BCcher
 # apt-get install hunspell hunspell-tools 
 # apt-get install hunspell-de-de
 # hunspell -i utf-8 -d de_DE -l frz.1943-02-24.01.txt > list_of_wrong_words.txt
+# convert dictionaries to utf-8, add extra dictionary with converted umlauts: Ä:Ae,ü:ue,ß:ss
 
 https://wiki.ubuntuusers.de/gImageReader/ (UI)
 

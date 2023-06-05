@@ -17,7 +17,7 @@ for fn in /usr/share/hunspell/*.aff; do
       echo "ISO encoding found: $fn"
       cp "$fn" "$fn.orig"
       iconv --from ISO8859-1 "$fn.orig" > "$fn"
-      sed -i "$fn"  's/SET ISO8859-1/SET UTF-8/'
+      sed -i 's/SET ISO8859-1/SET UTF-8/' "$fn"
       ;;
    *"utf-8"*)
       echo "UTF-8 encoding found: $fn"
@@ -27,6 +27,22 @@ for fn in /usr/share/hunspell/*.aff; do
       head $fn
       ;;
   esac
+  
+  case "$fn" in
+    *"de_DE"*)
+    cp "$fn" "$fn.new"
+    sed -i 's/Ä/{Ae}/g' "$fn.new"
+    sed -i 's/Ü/{Ue}/g' "$fn.new"
+    sed -i 's/Ö/{Oe}/g' "$fn.new"
+    sed -i 's/ä/{ae}/g' "$fn.new"
+    sed -i 's/ü/{ue}/g' "$fn.new"
+    sed -i 's/ö/{oe}/g' "$fn.new"   
+    #sed -i 's/ß/{ss}/g' "$fn.new"
+    sed -i 's/ß/ss/g' "$fn.new"
+    mv /usr/share/hunspell/de_DE.aff.new /usr/share/hunspell/dex_DEX.aff   
+    ;;
+  esac
+
 done
 
 for fn in /usr/share/hunspell/*.dic; do 
@@ -38,7 +54,7 @@ for fn in /usr/share/hunspell/*.dic; do
       echo "ISO encoding found: $fn"
       cp "$fn" "$fn.orig"
       iconv --from ISO8859-1 "$fn.orig" > "$fn"
-      #sed -i "$fn"  's/SET ISO8859-1/SET UTF-8/'
+      #sed -i 's/SET ISO8859-1/SET UTF-8/' "$fn" 
       ;;
    *"utf-8"*)
       echo "UTF-8 encoding found: $fn"
@@ -48,6 +64,22 @@ for fn in /usr/share/hunspell/*.dic; do
       head $fn
       ;;
   esac
+
+  case "$fn" in
+    *"de_DE"*)
+    cp "$fn" "$fn.new"
+    sed -i 's/Ä/{Ae}/g' "$fn.new"
+    sed -i 's/Ü/{Ue}/g' "$fn.new"
+    sed -i 's/Ö/{Oe}/g' "$fn.new"
+    sed -i 's/ä/{ae}/g' "$fn.new"
+    sed -i 's/ü/{ue}/g' "$fn.new"
+    sed -i 's/ö/{oe}/g' "$fn.new"    
+    #sed -i 's/ß/{ss}/g' "$fn.new"
+    sed -i 's/ß/ss/g' "$fn.new"
+    mv /usr/share/hunspell/de_DE.dic.new /usr/share/hunspell/dex_DEX.dic 
+    ;;
+  esac
+
 done
 
 file -bi /usr/share/hunspell/*.aff  && \
