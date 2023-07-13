@@ -4,6 +4,7 @@ creBuild 	 2023.07
   OpenSSL 1.1.1  11 Sep 2018
   Java 	 openjdk version "1.8.0_362"
   Python3 	 Python 3.6.9
+   Flask 	 Flask 2.0.3
  creMedia 	 1.0.0
   tesseract 5.3.0
   @(#) International Ispell Version 3.1.20 (but really Aspell 0.60.7-20110707)
