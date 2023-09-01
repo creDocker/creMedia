@@ -1,12 +1,12 @@
-creBuild 	 2023.08
+creBuild 	 2023.09
  creUbuntu 	 20.04.6 LTS
   UbuntuName 	 focal
   OpenSSL 1.1.1f  31 Mar 2020
-  Java 	 openjdk version "11.0.20" 2023-07-18
+  Java 	 openjdk version "11.0.20.1" 2023-08-24
   Python3 	 Python 3.8.10
    Flask 	 Flask 2.3.3
  creMedia 	 1.0.0
-  tesseract 5.3.1
+  tesseract 5.3.2
   @(#) International Ispell Version 3.1.20 (but really Aspell 0.60.8)
   @(#) International Ispell Version 3.2.06 (but really Hunspell 1.7.0)
   pdfTeX 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian)
