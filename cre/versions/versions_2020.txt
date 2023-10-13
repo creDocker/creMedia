@@ -6,7 +6,7 @@ creBuild 	 2023.10
   Python3 	 Python 3.8.10
    Flask 	 Flask 3.0.0
  creMedia 	 1.0.0
-  tesseract 5.3.2
+  tesseract 5.3.3
   @(#) International Ispell Version 3.1.20 (but really Aspell 0.60.8)
   @(#) International Ispell Version 3.2.06 (but really Hunspell 1.7.0)
   pdfTeX 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian)
