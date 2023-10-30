@@ -1,6 +1,8 @@
 #!/bin/bash
 # Current Container Name : {{ $CurrentContainer.Name }}
 
+# https://www.gnu.org/software/sed/manual/sed.html#The-_0022s_0022-Command
+
 apt-get update && \
 apt-get -y upgrade && \
 {{ range $hunLang := split $CurrentContainer.Env.HUNSPELL_LANGUAGES "," }} 

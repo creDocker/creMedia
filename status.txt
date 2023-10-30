@@ -112,3 +112,7 @@ https://askubuntu.com/questions/610903/how-can-i-create-a-video-file-from-a-set-
 # ffmpeg -codecs
 # ffmpeg -help
 
+cdo:
+https://www.isimip.org/protocol/preparing-simulation-files/cdo-help/
+https://code.mpimet.mpg.de/projects/cdo
+
