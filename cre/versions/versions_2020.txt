@@ -1,4 +1,4 @@
-creBuild 	 2023.10
+creBuild 	 2023.11
  creUbuntu 	 20.04.6 LTS
   UbuntuName 	 focal
   OpenSSL 1.1.1f  31 Mar 2020
@@ -11,3 +11,4 @@ creBuild 	 2023.10
   @(#) International Ispell Version 3.2.06 (but really Hunspell 1.7.0)
   pdfTeX 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian)
   ffmpeg version 4.2.7
+  
