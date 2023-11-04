@@ -1,4 +1,4 @@
-creBuild 	 2023.10
+creBuild 	 2023.11
  creUbuntu 	 22.04.3 LTS
   UbuntuName 	 jammy
   OpenSSL 3.0.2 15 Mar 2022 (Library: OpenSSL 3.0.2 15 Mar 2022)
@@ -12,3 +12,21 @@ creBuild 	 2023.10
   @(#) International Ispell Version 3.2.06 (but really Hunspell 1.7.0)
   pdfTeX 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian)
   ffmpeg version 4.4.2
+  Climate Data Operators version 2.0.4 (https://mpimet.mpg.de/cdo)
+System: x86_64-pc-linux-gnu
+CXX Compiler: g++ -std=gnu++14 -g -O2 -ffile-prefix-map=/build/cdo-hTyRvi/cdo-2.0.4=. -flto=auto -ffat-lto-objects -flto=auto -ffat-lto-objects -fstack-protector-strong -Wformat -Werror=format-security -fopenmp -pthread
+CXX version : g++ (Ubuntu 11.2.0-16ubuntu1) 11.2.0
+C Compiler: gcc -g -O2 -ffile-prefix-map=/build/cdo-hTyRvi/cdo-2.0.4=. -flto=auto -ffat-lto-objects -flto=auto -ffat-lto-objects -fstack-protector-strong -Wformat -Werror=format-security -Wall -pedantic -fPIC  -fopenmp -pthread -pthread
+C version : gcc (Ubuntu 11.2.0-16ubuntu1) 11.2.0
+F77 Compiler: f77 -g -O2 -ffile-prefix-map=/build/cdo-hTyRvi/cdo-2.0.4=. -flto=auto -ffat-lto-objects -flto=auto -ffat-lto-objects -fstack-protector-strong
+F77 version : GNU Fortran (Ubuntu 11.2.0-16ubuntu1) 11.2.0
+Features: 6GB 2threads C++14 OpenMP45 Fortran PTHREADS HDF5 NC4/HDF5/threadsafe OPeNDAP SZ UDUNITS2 PROJ MAGICS CURL FFTW3 SSE2
+Libraries: HDF5/1.10.7 proj/8.2.1 curl/7.81.0 magics/4.10.1
+CDI data types: SizeType=size_t  DateType=int64_t
+CDI file types: srv ext ieg grb1 grb2 nc1 nc2 nc4 nc4c nc5 
+     CDI library version : 2.0.4
+ ecCodes library version : 2.24.2
+  NetCDF library version : 4.8.1 of Sep 29 2021 09:36:14 $
+    hdf5 library version : library undefined
+    exse library version : 1.4.2
+    FILE library version : 1.9.1
