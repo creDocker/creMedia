@@ -20,7 +20,7 @@ C Compiler: gcc -g -O2 -ffile-prefix-map=/build/cdo-hTyRvi/cdo-2.0.4=. -flto=aut
 C version : gcc (Ubuntu 11.2.0-16ubuntu1) 11.2.0
 F77 Compiler: f77 -g -O2 -ffile-prefix-map=/build/cdo-hTyRvi/cdo-2.0.4=. -flto=auto -ffat-lto-objects -flto=auto -ffat-lto-objects -fstack-protector-strong
 F77 version : GNU Fortran (Ubuntu 11.2.0-16ubuntu1) 11.2.0
-Features: 6GB 2threads C++14 OpenMP45 Fortran PTHREADS HDF5 NC4/HDF5/threadsafe OPeNDAP SZ UDUNITS2 PROJ MAGICS CURL FFTW3 SSE2
+Features: 15GB 4threads C++14 OpenMP45 Fortran PTHREADS HDF5 NC4/HDF5/threadsafe OPeNDAP SZ UDUNITS2 PROJ MAGICS CURL FFTW3 SSE2
 Libraries: HDF5/1.10.7 proj/8.2.1 curl/7.81.0 magics/4.10.1
 CDI data types: SizeType=size_t  DateType=int64_t
 CDI file types: srv ext ieg grb1 grb2 nc1 nc2 nc4 nc4c nc5 
