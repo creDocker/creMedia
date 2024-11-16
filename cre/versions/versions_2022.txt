@@ -3,11 +3,11 @@ creBuild 	 2024.11
   UbuntuName 	 jammy
   OpenSSL 3.0.2 15 Mar 2022 (Library: OpenSSL 3.0.2 15 Mar 2022)
   msmtp version 1.8.16
-  Java 	 openjdk version "17.0.12" 2024-07-16
+  Java 	 openjdk version "17.0.13" 2024-10-15
   Python3 	 Python 3.10.12
    Flask 	 
  creMedia 	 1.0.0
-  tesseract 5.4.1
+  tesseract 5.5.0
   @(#) International Ispell Version 3.1.20 (but really Aspell 0.60.8)
   @(#) International Ispell Version 3.2.06 (but really Hunspell 1.7.0)
   pdfTeX 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian)
