@@ -109,6 +109,10 @@ RUN apt-get -y --no-install-recommends install texlive-full latex-make latex2htm
 # install cdo
 RUN apt-get -y --no-install-recommends install cdo
 
+# Freeze python requirements here:
+RUN mkdir -p /cre && \ 
+    pip3 freeze --no-cache-dir > /cre/requirements.txt.orig
+
 RUN mkdir -p /cre && touch /cre/versions.txt && \
    echo "$(date +'%F %R') \t creMedia \t $XXX_VERSION" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t  $(tesseract --version | grep tesseract)" >> /cre/versions.txt && \ 
