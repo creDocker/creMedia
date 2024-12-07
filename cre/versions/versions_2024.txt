@@ -1,0 +1,31 @@
+creBuild 	 2024.12
+ creUbuntu 	 24.04.1 LTS
+  UbuntuName 	 noble
+  OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)
+  msmtp version 1.8.24
+  Java 	 openjdk version "21.0.5" 2024-10-15
+  Python3 	 Python 3.12.3
+   Flask 	 
+ creMedia 	 1.0.0
+  tesseract 5.5.0
+  @(#) International Ispell Version 3.1.20 (but really Aspell 0.60.8.1)
+  @(#) International Ispell Version 3.2.06 (but really Hunspell 1.7.2)
+  pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)
+  ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers
+  Climate Data Operators version 2.4.0 (https://mpimet.mpg.de/cdo)
+System: x86_64-pc-linux-gnu
+CXX Compiler: g++ -std=gnu++20 -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/cdo-E16453/cdo-2.4.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/cdo-E16453/cdo-2.4.0=/usr/src/cdo-2.4.0-1build3 -fopenmp -pthread
+CXX version : g++ (Ubuntu 13.2.0-23ubuntu3) 13.2.0
+C Compiler: gcc -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/cdo-E16453/cdo-2.4.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/cdo-E16453/cdo-2.4.0=/usr/src/cdo-2.4.0-1build3 -Wall -pedantic -fPIC -fopenmp -pthread -pthread
+C version : gcc (Ubuntu 13.2.0-23ubuntu3) 13.2.0
+F77 Compiler: f77 -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/cdo-E16453/cdo-2.4.0=. -flto=auto -ffat-lto-objects -fstack-protector-strong -fstack-clash-protection -fcf-protection -fdebug-prefix-map=/build/cdo-E16453/cdo-2.4.0=/usr/src/cdo-2.4.0-1build3
+F77 version : GNU Fortran (Ubuntu 13.2.0-23ubuntu3) 13.2.0
+Features: 15GB 4threads c++20 OpenMP45 Fortran pthreads HDF5 NC4/HDF5/threadsafe OPeNDAP sz udunits2 proj xml2 magics curl fftw3 hirlam_extensions sse2
+Libraries: yac/3.1.0 NetCDF/4.9.2 HDF5/1.10.10 proj/9.4.0 xml2/2.9.14 curl/8.5.0 magics/4.15.2
+CDI data types: SizeType=size_t
+CDI file types: srv ext ieg grb1 grb2 nc1 nc2 nc4 nc4c nc5 nczarr 
+     CDI library version : 2.4.0
+ ecCodes library version : 2.34.1
+  NetCDF library version : 4.9.2 of Mar 31 2024 08:09:36 $
+    exse library version : 1.5.0
+    FILE library version : 1.9.1
