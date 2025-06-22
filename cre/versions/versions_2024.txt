@@ -10,7 +10,7 @@ creBuild 	 2025.06
    pandas 	 2.3.0
    Flask 	 
  creMedia 	 1.0.0
-  tesseract 5.5.0
+  tesseract 5.5.1
   @(#) International Ispell Version 3.1.20 (but really Aspell 0.60.8.1)
   @(#) International Ispell Version 3.2.06 (but really Hunspell 1.7.2)
   pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)
