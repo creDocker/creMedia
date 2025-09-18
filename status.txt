@@ -119,3 +119,17 @@ https://code.mpimet.mpg.de/projects/cdo
 
 https://mistral.ai/news/mistral-ocr
 
+
+https://github.com/microsoft/markitdown
+https://www.megaparse.com/
+
+steganography
+https://www.google.de/m?q=steganography+images+tools+linux
+https://steghide.sourceforge.net/
+https://github.com/lorossi/zero-width-steganography
+
+
+
+
+https://www.gpxz.io/blog/rayshading-in-python
+https://www.rayshader.com/
