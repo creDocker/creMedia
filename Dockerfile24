@@ -49,7 +49,7 @@ RUN apt-cache search tesseract
 RUN apt-get install -y --no-install-recommends tesseract-ocr
 #pytesseract ocrmypdf 
 
-RUN pip3 install pyocr 
+RUN uv pip install pyocr 
 
 # Install Spellchecker
 # https://wiki.ubuntuusers.de/GNU_Aspell/
@@ -64,11 +64,13 @@ RUN apt-get install -y --no-install-recommends hunspell hunspell-tools
 # RUN apt-get -y --no-install-recommends install texlive-full latex-make latex2html 
 # python3-latexcodec 
  
-# opencv?
+# PIL: https://pypi.org/project/pillow/
+RUN uv pip install pillow
 # OpenCV
 RUN apt-get -y --no-install-recommends  install python3-opencv
 RUN apt-get install -y python3-pil
-RUN pip3 install opencv-python
+RUN uv pip install opencv-python
+
 
 
 # install image magick
@@ -111,7 +113,7 @@ RUN apt-get -y --no-install-recommends install cdo
 
 # Freeze python requirements here:
 RUN mkdir -p /cre && \ 
-    pip3 freeze --no-cache-dir > /cre/requirements.txt.orig
+    uv pip freeze --no-cache-dir > /cre/requirements.txt.orig
 
 RUN mkdir -p /cre && touch /cre/versions.txt && \
    echo "$(date +'%F %R') \t creMedia \t $XXX_VERSION" >> /cre/versions.txt && \
@@ -120,7 +122,7 @@ RUN mkdir -p /cre && touch /cre/versions.txt && \
    echo "$(date +'%F %R') \t  $(hunspell --version | grep Hunspell)" >> /cre/versions.txt && \ 
 ##   echo "$(date +'%F %R') \t  $(convert -version | grep Version)" >> /cre/versions.txt && \ 
 ##   echo "$(date +'%F %R') \t  $(vips -version)" >> /cre/versions.txt && \ 
-##   echo "$(date +'%F %R') \t  openCV \t $(python3 -c 'import cv2; print(cv2.__version__)')" >> /cre/versions.txt && \
+##   echo "$(date +'%F %R') \t  openCV \t $(uv run python -c 'import cv2; print(cv2.__version__)')" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t  $(latex --version | grep Debian)" >> /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t  $(ffmpeg -version | sed -e 's/-0ubuntu.*//g' | sed -e 's/configuration:.*//g'  | grep version)" >> /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t  $(cdo -V)" >> /cre/versions.txt

@@ -112,6 +112,8 @@ https://askubuntu.com/questions/610903/how-can-i-create-a-video-file-from-a-set-
 # ffmpeg -codecs
 # ffmpeg -help
 
+https://www.howtogeek.com/10-tricks-you-can-do-with-ffmpeg-on-linux/
+
 cdo:
 https://www.isimip.org/protocol/preparing-simulation-files/cdo-help/
 https://code.mpimet.mpg.de/projects/cdo
@@ -129,7 +131,19 @@ https://steghide.sourceforge.net/
 https://github.com/lorossi/zero-width-steganography
 
 
+https://www.coherentpdf.com/
+
 
 
 https://www.gpxz.io/blog/rayshading-in-python
 https://www.rayshader.com/
+
+https://pdfcpu.io
+https://blog.jakobs.systems/blog/20251012-pdf-formulare-automatisieren/
+https://pdfcpu.io/form/form
+
+https://github.com/microsoft/markitdown
+
+Mistral-OCR
+https://docs.openwebui.com/features/chat-conversations/rag/document-extraction/mistral-ocr
+
