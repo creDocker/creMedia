@@ -77,6 +77,13 @@ https://thucnc.medium.com/convert-a-scanned-pdf-to-text-with-linux-command-line-
 https://github.com/ocrmypdf/OCRmyPDF
 
 
+Mutool:
+https://github.com/ArtifexSoftware/mupdf
+https://mupdf.readthedocs.io/_/downloads/en/1.26.1/pdf/
+apt-get install mupdf-tools
+npm install mupdf
+
+
 Spellcheck:
 https://wiki.ubuntuusers.de/Hunspell/
 https://metacpan.org/pod/Text::Hunspell
@@ -143,7 +150,21 @@ https://blog.jakobs.systems/blog/20251012-pdf-formulare-automatisieren/
 https://pdfcpu.io/form/form
 
 https://github.com/microsoft/markitdown
+https://github.com/docling-project/docling
 
 Mistral-OCR
 https://docs.openwebui.com/features/chat-conversations/rag/document-extraction/mistral-ocr
+
+#Calibre & Pandoc
+https://askubuntu.com/questions/299747/converting-epub-files-to-pdf-format
+sudo apt-get install calibre
+ebook-convert file.epub file.pdf
+
+https://github.com/jgm/pandoc
+sudo apt install pandoc
+pandoc -f epub -t pdf infile.epub -o outfile.pdf
+pandoc -f epub -t latex  Nation.epub -o Nation_pandoc.pdf
+pandoc -V fontsize=12pt -V geometry:margin=1in -f epub -t latex -o Nation_pandoc.pdf --pdf-engine=xelatex Nation.epub
+
+
 

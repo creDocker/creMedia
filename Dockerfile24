@@ -85,6 +85,15 @@ RUN apt-get -y --no-install-recommends install ffmpeg
 # https://wiki.ubuntuusers.de/poppler-utils/
 RUN apt-get -y --no-install-recommends install poppler-utils
 
+# Calibre
+# https://askubuntu.com/questions/299747/converting-epub-files-to-pdf-format
+# ebook-convert file.epub file.pdf
+RUN apt-get -y --no-install-recommends install calibre
+
+# pandoc
+# https://github.com/jgm/pandoc
+RUN apt-get -y --no-install-recommends install pandoc
+
 # Install MagickSlicer (DeepZoom,Zoomify)
 # https://github.com/VoidVolker/MagickSlicer
 # Viewer: https://github.com/openseadragon/openseadragon
