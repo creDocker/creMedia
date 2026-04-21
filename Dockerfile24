@@ -130,6 +130,9 @@ RUN mkdir -p /cre && touch /cre/versions.txt && \
    echo "$(date +'%F %R') \t  $(aspell --version)" >> /cre/versions.txt && \ 
    echo "$(date +'%F %R') \t  $(hunspell --version | grep Hunspell)" >> /cre/versions.txt && \ 
 ##   echo "$(date +'%F %R') \t  $(convert -version | grep Version)" >> /cre/versions.txt && \ 
+   echo "$(date +'%F %R') \t  $(gs -v | grep Ghostscript)" >> /cre/versions.txt && \ 
+   echo "$(date +'%F %R') \t  $(pandoc -v | grep pandoc)" >> /cre/versions.txt && \ 
+   echo "$(date +'%F %R') \t  $(ebook-convert --version | grep ebook)" >> /cre/versions.txt && \ 
 ##   echo "$(date +'%F %R') \t  $(vips -version)" >> /cre/versions.txt && \ 
 ##   echo "$(date +'%F %R') \t  openCV \t $(uv run python -c 'import cv2; print(cv2.__version__)')" >> /cre/versions.txt && \
    echo "$(date +'%F %R') \t  $(latex --version | grep Debian)" >> /cre/versions.txt && \ 
