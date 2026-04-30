@@ -40,18 +40,16 @@ LABEL Name="Media for CRE" \
 ##    apt-get -y --no-install-recommends install tesseract
 
 # https://notesalexp.org/tesseract-ocr/#tesseract_5.x 
-RUN wget --help
-RUN echo "deb https://notesalexp.org/tesseract-ocr5/$(lsb_release -cs)/ $(lsb_release -cs) main" \
-| sudo tee /etc/apt/sources.list.d/notesalexp.list > /dev/null
+# https://www.ubuntuupdates.org/package/core/resolute/universe/base/tesseract-ocr
 
-
+#RUN wget --help
+#RUN echo "deb https://notesalexp.org/tesseract-ocr5/$(lsb_release -cs)/ $(lsb_release -cs) main" \
+#| sudo tee /etc/apt/sources.list.d/notesalexp.list > /dev/null
 #RUN apt-get update -oAcquire::AllowInsecureRepositories=true
 #RUN apt-get install notesalexp-keyring -oAcquire::AllowInsecureRepositories=true
 #RUN apt-get update
-
-RUN wget -O- https://notesalexp.org/debian/alexp_key.asc | apt-key add -
-RUN apt-get update 
-
+#RUN wget -O- https://notesalexp.org/debian/alexp_key.asc | apt-key add -
+#RUN apt-get update 
 
 RUN apt-cache search tesseract 
 RUN apt-get install -y --no-install-recommends tesseract-ocr
