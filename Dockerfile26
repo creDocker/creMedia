@@ -45,12 +45,12 @@ RUN echo "deb https://notesalexp.org/tesseract-ocr5/$(lsb_release -cs)/ $(lsb_re
 | sudo tee /etc/apt/sources.list.d/notesalexp.list > /dev/null
 
 
-RUN apt-get update -oAcquire::AllowInsecureRepositories=true
-RUN apt-get install notesalexp-keyring -oAcquire::AllowInsecureRepositories=true
-RUN apt-get update
+#RUN apt-get update -oAcquire::AllowInsecureRepositories=true
+#RUN apt-get install notesalexp-keyring -oAcquire::AllowInsecureRepositories=true
+#RUN apt-get update
 
-#RUN wget -O- https://notesalexp.org/debian/alexp_key.asc | apt-key add -
-#RUN apt-get update 
+RUN wget -O- https://notesalexp.org/debian/alexp_key.asc | apt-key add -
+RUN apt-get update 
 
 
 RUN apt-cache search tesseract 
