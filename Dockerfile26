@@ -53,9 +53,10 @@ LABEL Name="Media for CRE" \
 
 RUN apt-cache search tesseract 
 RUN apt-get install -y --no-install-recommends tesseract-ocr
-#pytesseract ocrmypdf 
 
-RUN uv pip install pyocr 
+#ocrmypdf 
+RUN pip3 install pyocr 
+RUN pip3 install pytesseract
 
 # Install Spellchecker
 # https://wiki.ubuntuusers.de/GNU_Aspell/
