@@ -11,7 +11,7 @@ creBuild 	 2026.08
    pandas 	 3.0.5
    Flask 	 
  creMedia 	 1.0.0
-  tesseract 5.5.2
+  tesseract 5.5.3
   @(#) International Ispell Version 3.1.20 (but really Aspell 0.60.8.1)
   @(#) International Ispell Version 3.2.06 (but really Hunspell 1.7.2)
   GPL Ghostscript 10.02.1 (2023-11-01)
