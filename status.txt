@@ -167,4 +167,26 @@ pandoc -f epub -t latex  Nation.epub -o Nation_pandoc.pdf
 pandoc -V fontsize=12pt -V geometry:margin=1in -f epub -t latex -o Nation_pandoc.pdf --pdf-engine=xelatex Nation.epub
 
 
+PDF2Audio:  pyttsx3
+https://pypi.org/project/pyttsx3/
+https://github.com/espeak-ng/espeak-ng?tab=readme-ov-file#readme
+# apt update && sudo apt install espeak-ng libespeak1
+https://www.instagram.com/p/DZVRmvcD1YM/?igsh=MmwxY2ptNGU3ZmUx
+
+https://github.com/opendataloader-project/opendataloader-pdf
+
+
+https://pypdf2.readthedocs.io/en/3.x/
+---
+import PyPDF2
+
+with open("sample.pdf", "rb") as pdf_file:
+    read_pdf = PyPDF2.PdfFileReader(pdf_file)
+    number_of_pages = read_pdf.getNumPages()
+    page = read_pdf.pages[0]
+    page_content = page.extractText()
+print(page_content)
+---
+
+
 

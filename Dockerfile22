@@ -51,6 +51,8 @@ RUN apt-get install -y --no-install-recommends tesseract-ocr
 #ocrmypdf 
 RUN pip3 install pyocr 
 RUN pip3 install pytesseract
+# https://pypdf2.readthedocs.io/en/3.x/
+RUN pip3 install PyPDF2
 
 # Install Spellchecker
 # https://wiki.ubuntuusers.de/GNU_Aspell/
